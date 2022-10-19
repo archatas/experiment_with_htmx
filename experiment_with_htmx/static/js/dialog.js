@@ -5,7 +5,6 @@ function init_widgets_for_htmx_element(target) {
     if (target.tagName === 'DIALOG') {
         target.showModal();
         htmx.on(".close-dialog", "click", function(event) {
-            console.log("closing")
             var dialog = htmx.find('dialog[open]');
             dialog.close();
             htmx.remove(dialog);

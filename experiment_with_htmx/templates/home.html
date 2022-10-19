@@ -1,13 +1,21 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-    <p class="text-center">
-        <button
-            data-hx-get="{% url 'login' %}"
-            data-hx-target="main"
-            data-hx-swap="beforeend"
-            type="button"
-            class="btn btn-primary"
-        >Log in</button>
-    </p>
+    <div class="row">
+        <div class="col">
+            <p class="text-center">
+                <button
+                    data-hx-get="{% url 'login' %}"
+                    data-hx-target="main"
+                    data-hx-swap="beforeend"
+                    type="button"
+                    class="btn btn-primary"
+                >Log in</button>
+            </p>
+        </div>
+        <div class="col">
+            {% crispy form %}
+        </div>
+    </div>
 {% endblock %}
