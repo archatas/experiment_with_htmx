@@ -1,0 +1,11 @@
+<dialog id="htmx-dialog" role="document" class="modal-content bg-white rounded-4 shadow">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-2">Login</h1>
+        <button type="button" class="close-dialog btn-close" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body p-5 pt-0">
+        {% include "login_form.html" %}
+        <button type="submit" form="htmx-dialog-form" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary">Log in</button>
+    </div>
+</dialog>

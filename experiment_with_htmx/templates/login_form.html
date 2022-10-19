@@ -1,0 +1,9 @@
+<form
+    id="htmx-dialog-form"
+    novalidate
+    data-hx-post="{% url 'login' %}"
+    data-hx-swap="outerHTML"
+>
+    {% load crispy_forms_tags %}
+    {% crispy form %}
+</form>

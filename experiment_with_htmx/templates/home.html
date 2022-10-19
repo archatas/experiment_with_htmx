@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p class="text-center">
+        <button
+            data-hx-get="{% url 'login' %}"
+            data-hx-target="main"
+            data-hx-swap="beforeend"
+            type="button"
+            class="btn btn-primary"
+        >Log in</button>
+    </p>
+{% endblock %}

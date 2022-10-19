@@ -1,0 +1,9 @@
+dialog {
+    max-width: 60%;
+    z-index: 1;
+    position: absolute;
+}
+
+::backdrop {
+    z-index: 0;
+}
