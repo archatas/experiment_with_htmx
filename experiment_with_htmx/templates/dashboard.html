@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p class="text-center">
-        Hello and welcome back, {{ request.user.get_full_name|default:request.user.username }}!
-    </p>
-    <p class="text-center">
-        <a href="{% url 'logout' %}" class="btn btn-primary">Log out</a>
-    </p>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-md-row align-items-center g-5 py-5">
+            <div class="col-md-12">
+                <p class="text-center">
+                    Hello and welcome back, {{ request.user.get_full_name|default:request.user.username }}!
+                </p>
+                <p class="text-center">
+                    <a href="{% url 'logout' %}" class="btn btn-primary">Log out</a>
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

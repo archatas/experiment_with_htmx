@@ -2,20 +2,22 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="row">
-        <div class="col">
-            <p class="text-center">
-                <button
-                    data-hx-get="{% url 'login' %}"
-                    data-hx-target="main"
-                    data-hx-swap="beforeend"
-                    type="button"
-                    class="btn btn-primary"
-                >Log in</button>
-            </p>
-        </div>
-        <div class="col">
-            {% crispy form %}
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-md-row align-items-center g-5 py-5">
+            <div class="offset-md-2 col-md-4">
+                <p class="text-center">
+                    <button
+                        data-hx-get="{% url 'login' %}"
+                        data-hx-target="main"
+                        data-hx-swap="beforeend"
+                        type="button"
+                        class="btn btn-primary"
+                    >Log in</button>
+                </p>
+            </div>
+            <div class="col-md-4">
+                {% crispy form %}
+            </div>
         </div>
     </div>
 {% endblock %}
